@@ -1,11 +1,13 @@
 import { Router } from 'express';
-import usersRoutes from './usersRoutes';
-import postsRoutes from './postsRoutes';
+import roomRoutes from './roomRoutes';
+import chairRoutes from './chairRoutes';
+import hotelRoutes from './hotelRoutes';
 
 const router = Router();
 
-router.use('/users', usersRoutes);
-router.use('/posts', postsRoutes);
+router.use('/rooms', roomRoutes);
+router.use('/chairs', chairRoutes);
+router.use('/hotels', hotelRoutes);
 
 router.get('/', (req, res) => {
   res.json({ message: 'API is running' });

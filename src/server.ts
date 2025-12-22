@@ -1,11 +1,13 @@
 import app from './app';
-import { createUserTable } from './models/userModel';
-import { createPostTable } from './models/postModel';
+import { createRoomsTable } from './models/chairRoomModel';
+import { createHotelTable } from './models/hotelModel';
+import { createChairTable } from './models/chairModel';
 
-createUserTable();
-createPostTable();
+createRoomsTable();
+createChairTable();
+createHotelTable();
 
-const PORT = 3000;
+const PORT = 5000;
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
